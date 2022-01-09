@@ -197,3 +197,48 @@ aside > div > span {
 #rating > i.gold {
   color: #fdcc0d;
 }
+#sizes {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.size {
+  font-size: 1.4rem;
+  color: #ddd;
+  position: relative;
+  margin-top: 10px;
+}
+.size::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ddd;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.size.active {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: -30px;
+}
+.size.active::after {
+  background-color: #fff;
+  top: -20px;
+}
+.size.active::before {
+  content: "";
+  z-index: -1;
+  height: 80px;
+  width: 80px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
