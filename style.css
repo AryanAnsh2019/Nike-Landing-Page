@@ -8,6 +8,9 @@ body {
   background-color: #dce6f0;
   display: flex;
 }
+button {
+  cursor: pointer;
+}
 main {
   width: 60%;
   height: 100vh;
@@ -122,8 +125,14 @@ aside {
   background-color: #78c1ed;
   width: 40%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
 }
 aside > div {
+  width: 100%;
   padding: 30px 20px;
   display: flex;
   justify-content: space-around;
@@ -133,11 +142,58 @@ aside > div > span {
   font-weight: 300;
 }
 #cart {
-  cursor: pointer;
   border: none;
   padding: 10px 12px;
   background-color: #000;
   color: #fff;
   border-radius: 10px;
   font-size: 1.2rem;
+}
+#shoeDetails {
+  background-color: #000;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+}
+#shoeDetails::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  background-color: #000;
+  height: 140px;
+  width: 120%;
+  border-radius: 50%;
+}
+
+#details {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  color: #fff;
+}
+#details > h4 {
+  font-size: 2.25rem;
+}
+#details > hr {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#review {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+}
+#rating {
+  font-size: 1.2rem;
+}
+#rating > i {
+  color: #eee;
+}
+#rating > i.gold {
+  color: #fdcc0d;
 }
