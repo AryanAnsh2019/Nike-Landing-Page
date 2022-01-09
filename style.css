@@ -5,6 +5,9 @@
   font-family: "Quicksand";
   font-weight: 500;
 }
+body {
+  background-color: #dce6f0;
+}
 #navbar {
   width: 60%;
   padding: 30px;
@@ -45,6 +48,66 @@
   font-weight: 500;
 }
 .nav-link.active::after {
-    height:3px;
-    background: #000;
+  height: 3px;
+  background: #000;
+}
+#searchBar {
+  display: flex;
+  overflow: hidden;
+}
+#searchBar > * {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+#searchBar > button {
+  border-radius: 10px;
+  margin-left: -10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2.5rem;
+}
+#searchBar > input {
+  width: 250px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  border-radius: 10px;
+}
+section:nth-of-type(1) {
+  width: 60%;
+  padding: 30px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#discount > h3 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-left: 5px;
+}
+#discount > div {
+  height: 2px;
+  width: 180px;
+  background-color: #000;
+  position: relative;
+  margin-bottom: 5px;
+}
+#discount > div::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  background-color: #000;
+  height: 10px;
+  width: 10px;
+  transform: translateY(-50%);
+}
+#discount > p {
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-left: 5px;
 }
