@@ -5,7 +5,9 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #dce6f0;
+  /* background-color: #dce6f0; */
+  background-color: #f0e5dc;
+  /* background-color: #e8f0dc; */
   display: flex;
 }
 button {
@@ -122,7 +124,9 @@ h1 {
   padding: 0 30px;
 }
 aside {
-  background-color: #78c1ed;
+  /* background-color: #78c1ed; */
+  background-color: #eba768;
+  /* background-color: #97a754; */
   width: 40%;
   height: 100vh;
   display: flex;
@@ -131,7 +135,8 @@ aside {
   overflow: hidden;
   justify-content: space-between;
 }
-aside > div {
+aside > div:nth-of-type(1),
+aside > div:nth-of-type(3) {
   width: 100%;
   padding: 30px 20px;
   display: flex;
@@ -241,4 +246,51 @@ aside > div > span {
   top: -40px;
   left: 50%;
   transform: translateX(-50%);
+}
+#productImg {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#productImg > img {
+  height: 450px;
+  width: 450px;
+  object-fit: cover;
+  transform: rotate(-30deg);
+}
+#productImg > img.green {
+  filter: hue-rotate(100deg);
+}
+#productImg > img.blue {
+  filter: hue-rotate(180deg);
+}
+#colors {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  transform: translateX(-50%);
+}
+#colors > button {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  display: block;
+  background-color: #ffffff96;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 10px;
+}
+#colors > button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: var(--bg);
+  border: 1px solid white;
 }
