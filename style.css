@@ -4,10 +4,12 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+html {
+  --main-primary: #eba768;
+  --main-secondary: #f0e5dc;
+}
 body {
-  /* background-color: #dce6f0; */
-  background-color: #f0e5dc;
-  /* background-color: #e8f0dc; */
+  background-color: var(--main-secondary);
   display: flex;
 }
 button {
@@ -118,33 +120,31 @@ section:nth-of-type(1) {
   font-size: 1.2rem;
   margin-left: 5px;
 }
-#nikeText{
-    padding: 0 30px;
+#nikeText {
+  padding: 0 30px;
 }
-#nikeText>h1 {
+#nikeText > h1 {
   font-size: 5rem;
   font-weight: 700;
 }
-#nikeText>p{
-    font-weight:300;
-    font-size:1.2rem;
-    max-width: 80%;
-    margin:10px 0;
+#nikeText > p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  max-width: 80%;
+  margin: 10px 0;
 }
-#nikeText>button{
-    border:none;
-    background-color:#000;
-    color:#fff;
-    padding:15px 40px;
-    font-size: 1.3rem;
-    font-weight: 300;
-    border-radius:10px;
+#nikeText > button {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  border-radius: 10px;
   margin-top: 10px;
 }
 aside {
-  /* background-color: #78c1ed; */
-  background-color: #eba768;
-  /* background-color: #97a754; */
+  background-color: var(--main-primary);
   width: 40%;
   height: 100vh;
   display: flex;
