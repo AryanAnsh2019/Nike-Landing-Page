@@ -118,10 +118,28 @@ section:nth-of-type(1) {
   font-size: 1.2rem;
   margin-left: 5px;
 }
-h1 {
+#nikeText{
+    padding: 0 30px;
+}
+#nikeText>h1 {
   font-size: 5rem;
   font-weight: 700;
-  padding: 0 30px;
+}
+#nikeText>p{
+    font-weight:300;
+    font-size:1.2rem;
+    max-width: 80%;
+    margin:10px 0;
+}
+#nikeText>button{
+    border:none;
+    background-color:#000;
+    color:#fff;
+    padding:15px 40px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    border-radius:10px;
+  margin-top: 10px;
 }
 aside {
   /* background-color: #78c1ed; */
