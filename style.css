@@ -236,6 +236,8 @@ aside > div > span {
   color: #ddd;
   position: relative;
   margin-top: 10px;
+  transition: 0.2s;
+  cursor: pointer;
 }
 .size::after {
   content: "";
@@ -251,7 +253,7 @@ aside > div > span {
 .size.active {
   font-size: 2rem;
   color: #fff;
-  margin-top: -30px;
+  margin-top: var(--mt);
 }
 .size.active::after {
   background-color: #fff;
@@ -281,7 +283,7 @@ aside > div > span {
   width: 450px;
   object-fit: cover;
   transform: rotate(-30deg);
-  transition: filter 0.5s;
+  transition: filter 0.5s, transform 0.2s;
 }
 #productImg > img.green {
   filter: hue-rotate(100deg);

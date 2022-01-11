@@ -1,3 +1,4 @@
+//Color Changing
 const buttons = document.querySelectorAll("#colors>button");
 const html = document.querySelector("html");
 const img = document.querySelector("#productImg>img");
@@ -22,6 +23,17 @@ buttons.forEach((button) =>
   })
 );
 
+//Size Changing
+const sizes = document.querySelectorAll(".size");
+sizes.forEach((s) =>
+  s.addEventListener("click", (e) => {
+    sizes.forEach((s) => s.classList.remove("active"));
+    e.srcElement.classList.add("active");
+    img.style.transform = `rotate(-30deg) scale(${e.srcElement.innerText / 41})`;
+  })
+);
+
+//GSAP Animations
 const maintl = gsap.timeline({
   defaults: { duration: 0.5, ease: "power1.inOut" },
 });
