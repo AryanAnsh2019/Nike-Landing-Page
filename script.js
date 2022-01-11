@@ -1,3 +1,16 @@
+//Navbar
+const toggle = document.querySelector("#toggle");
+const overlay = document.querySelector("#overlay");
+
+toggle.addEventListener("click", () => {
+  overlay.classList.toggle("active");
+  if (overlay.classList.contains("active")) {
+    toggle.innerHTML = '<i class="bi bi-x"></i>';
+  } else {
+    toggle.innerHTML = '<i class="bi bi-list"></i>';
+  }
+});
+
 //Color Changing
 const buttons = document.querySelectorAll("#colors>button");
 const html = document.querySelector("html");
@@ -29,7 +42,9 @@ sizes.forEach((s) =>
   s.addEventListener("click", (e) => {
     sizes.forEach((s) => s.classList.remove("active"));
     e.srcElement.classList.add("active");
-    img.style.transform = `rotate(-30deg) scale(${e.srcElement.innerText / 41})`;
+    img.style.transform = `rotate(-30deg) scale(${
+      e.srcElement.innerText / 41
+    })`;
   })
 );
 

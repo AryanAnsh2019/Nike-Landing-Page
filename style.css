@@ -21,6 +21,8 @@ main {
   height: 100vh;
 }
 #navbar {
+  position: relative;
+  z-index: 101;
   padding: 30px;
   display: flex;
   justify-content: space-between;
@@ -62,6 +64,16 @@ main {
   height: 3px;
   background: #000;
 }
+#toggle {
+  font-size: 1.2rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 10px;
+  display: none;
+  transition:margin 0.5s;
+}
 #searchBar {
   display: flex;
   overflow: hidden;
@@ -90,6 +102,8 @@ section:nth-of-type(1) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: -1;
 }
 #discount > h3 {
   font-size: 3.5rem;
@@ -124,7 +138,7 @@ section:nth-of-type(1) {
 #nikeText {
   padding: 0 30px;
   position: relative;
-  z-index: -1;
+  z-index: -2;
 }
 #nikeText > h1 {
   font-size: 5rem;
@@ -178,7 +192,7 @@ aside > div > span {
 }
 #shoeDetails {
   background-color: #000;
-  height: 30%;
+  height: 40%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -318,4 +332,49 @@ aside > div > span {
   width: 15px;
   background-color: var(--bg);
   border: 1px solid white;
+}
+#overlay {
+  position: absolute;
+  z-index: 100;
+  height: 100%;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+#overlay > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#overlay .nav-link {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 10px;
+}
+@media (max-width: 1100px) {
+  #toggle {
+    display: block;
+  }
+  #navbar > div {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #overlay {
+    width: 100%;
+  }
+  #overlay.active + main #toggle {
+    margin-left:100%;
+    /* display: none; */
+  }
 }
