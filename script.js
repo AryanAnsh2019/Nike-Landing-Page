@@ -4,10 +4,9 @@ const img = document.querySelector("#productImg>img");
 
 buttons.forEach((button) =>
   button.addEventListener("click", (e) => {
-      
-    img.classList.remove('orange');
-    img.classList.remove('blue');
-    img.classList.remove('green');
+    img.classList.remove("orange");
+    img.classList.remove("blue");
+    img.classList.remove("green");
 
     img.classList.add(e.srcElement.id);
     if (e.srcElement.id === "orange") {
@@ -22,3 +21,57 @@ buttons.forEach((button) =>
     }
   })
 );
+
+const maintl = gsap.timeline({
+  defaults: { duration: 0.5, ease: "power1.inOut" },
+});
+const asidetl = gsap.timeline({
+  defaults: { duration: 0.5, ease: "power1.inOut" },
+});
+
+maintl
+  .from(".anim1", {
+    opacity: 0,
+    y: -200,
+    stagger: 0.2,
+  })
+  .from(
+    "#searchBar",
+    {
+      opacity: 0,
+      y: -500,
+    },
+    "=-0.4"
+  )
+  .from(
+    "#discount",
+    {
+      rotate: 60,
+      opacity: 0,
+      duration: 1,
+      ease: "power4.out",
+    },
+    "=-0.1"
+  )
+  .from(
+    "#nikeText *",
+    {
+      opacity: 0,
+      y: -500,
+    },
+    "=-0.5"
+  );
+asidetl
+  .from("#productImg>img", {
+    x: 100,
+    opacity: 0,
+    delay: 1,
+  })
+  .from("#colors>button", {
+    opacity: 0,
+    stagger: 0.2,
+  })
+  .from("#shoeDetails", {
+    y: 100,
+    opacity: 0,
+  });
