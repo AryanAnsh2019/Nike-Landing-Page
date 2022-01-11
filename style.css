@@ -19,6 +19,9 @@ button {
 main {
   width: 60%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 #navbar {
   position: relative;
@@ -72,7 +75,7 @@ main {
   padding: 7px 10px;
   border-radius: 10px;
   display: none;
-  transition:margin 0.5s;
+  transition: margin 0.5s;
 }
 #searchBar {
   display: flex;
@@ -369,12 +372,51 @@ aside > div > span {
     display: none;
   }
 }
+@media (max-width: 992px) {
+  #searchBar > input {
+    width: 200px;
+  }
+  #searchBar > * {
+    padding: 3px 10px;
+  }
+  #discount > h3 {
+    font-size: 3rem;
+  }
+  #discount > div {
+    width: 150px;
+  }
+  #discount > p {
+    font-size: 1.1rem;
+  }
+  #nikeText > h1 {
+    font-size: 4rem;
+  }
+  #nikeText > p {
+    font-size: 1.1rem;
+  }
+}
 @media (max-width: 768px) {
   #overlay {
     width: 100%;
   }
   #overlay.active + main #toggle {
-    margin-left:100%;
-    /* display: none; */
+    margin-left: 100%;
+  }
+  #discount {
+    display: none;
+  }
+  #searchBar {
+    width: 90%;
+  }
+  #searchBar > input {
+    display: block;
+    width: 100%;
+  }
+  #nikeText > h1 {
+    font-size: 3rem;
+  }
+  #nikeText > button {
+    padding: 10px 30px;
+    font-size: 1.1rem;
   }
 }
